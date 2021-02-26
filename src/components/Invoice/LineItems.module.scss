@@ -3,11 +3,11 @@
 .lineItems {
   width: 80mm;
   .addItem {
+    margin-top: 20px;
     button {
       @extend %flex-center;
       background: none;
       padding: $rhythm / 4;
-      padding-top: 1rem;
       border: 1px solid $addColor;
       color: $addColor;
       border-radius: $borderRadius;
