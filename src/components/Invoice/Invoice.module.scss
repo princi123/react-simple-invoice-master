@@ -59,6 +59,7 @@
   & > .row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    height: 32px;
     border-bottom: 1px solid $tableBorderColor;
     &:last-of-type {
       border-bottom: none;
@@ -70,6 +71,7 @@
       @extend %flex-center;
       justify-content: flex-start;
       font-weight: bold;
+      font-size: x-large;
     }
     & > .princi {
       @extend %flex-center;
@@ -77,8 +79,54 @@
       font-weight: bold;
       font-size: x-large;
     }
+    & > .time {
+      text-align: right;
+    }
   }
 }
+
+.anaya {
+  text-align: center;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.valueTableNew {
+  margin: 0 0 0 auto;
+  overflow: hidden;
+  width: 100%;
+  min-width: $invoiceMaxWidth / 3;
+  max-width: $invoiceMaxWidth / 3;
+  padding-bottom: 5px;
+  & > .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 32px;
+    border-bottom: 1px solid $tableBorderColor;
+    &:last-of-type {
+      border-bottom: none;
+    }
+    & > div {
+      padding: ($rhythm/2);
+    }
+    & > .label {
+      text-align: right;
+      justify-content: flex-start;
+      font-weight: bold;
+      font-size: x-large;
+    }
+    & > .princi {
+      justify-content: flex-start;
+      font-weight: bold;
+      font-size: x-large;
+      text-align: right;
+    }
+    & > .time {
+      text-align: right;
+    }
+  }
+}
+
 
 .totalContainer {
   display: flex;
@@ -95,7 +143,7 @@
 
 button.payNow {
   display: block;
-  padding: ($rhythm) ($rhythm * 2);
+  padding: ($rhythm / 4) ($rhythm * 1);
   background: lightyellow;
   border-radius: $borderRadius;
   border: 1px solid #444;

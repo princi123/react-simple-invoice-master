@@ -3,12 +3,11 @@
 .lineItem {
 
   display: grid;
-  grid-template-columns: 42px 80px 80px 78px 13px;
+  grid-template-columns: 54px 80px 68px 78px 13px;
   grid-auto-flow: column;
 
   & > div {
     @extend %flex-center;
-    padding: ($rhythm/2);
     border-left: 1px solid $tableBorderColor;
     width: 100%;
     line-height: $rhythm;
@@ -35,6 +34,12 @@
   padding: 0;
   cursor: pointer;
 }
+
+.navi {
+  font-weight: bold;
+  font-size: x-large;
+}
+
 
 input, input[type=number] {
   padding: $rhythm / 4;

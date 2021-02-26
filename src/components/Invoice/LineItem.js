@@ -13,9 +13,9 @@ class LineItem extends Component {
     return (
       <div className={styles.lineItem}>
         <div>{index + 1})Item</div>
-        <div><input name="price" type="number" value={price} onChange={this.props.changeHandler(index)} onFocus={this.props.focusHandler} /></div>
-        <div><input name="quantity" type="number" value={quantity} onChange={this.props.changeHandler(index)} onFocus={this.props.focusHandler} /></div>
-        <div>{ quantity * price }</div>
+        <div className={styles.navi}><input name="price" type="number" value={price} onChange={this.props.changeHandler(index)} onFocus={this.props.focusHandler} /></div>
+        <div className={styles.navi}><input name="quantity" type="number" value={quantity} onChange={this.props.changeHandler(index)} onFocus={this.props.focusHandler} /></div>
+        <div className={styles.navi}>{ quantity * price }</div>
         <div>
           <button type="button"
             className={styles.deleteItem}

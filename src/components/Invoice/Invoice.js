@@ -5,6 +5,7 @@ import LineItems from './LineItems'
 
 import uuidv4 from 'uuid/v4'
 import {getCurrentDate} from './getCurrentDate'
+import {getCurrentTime} from './getCurrentTime'
 
 
 class Invoice extends Component {
@@ -97,32 +98,32 @@ class Invoice extends Component {
     return (
 
       <div className={styles.invoice}>
-        <div>
-
-          <div>
-            <div className={`${styles.valueTable} ${styles.to}`}>
-              <div className={styles.row}>
-                <div className={styles.label}>Date</div>
-                <div className={`${styles.value} ${styles.date}`}>{getCurrentDate()}</div>
-              </div>
-            </div>
+        <div className={styles.anaya}>NS</div>
+        <div className={`${styles.valueTable} ${styles.to}`}>
+          <div className={styles.row}>
+            <div className={styles.label}>Date</div>
+            <div className={`${styles.value} ${styles.date}`}>{getCurrentDate()}</div>
           </div>
+          <div className={styles.row}>
+            <div className={styles.label}>Time</div>
+            <div className={`${styles.value} ${styles.date}`}>{getCurrentTime()}</div>
+          </div>
+          <div><input name="text" type="text"/></div>
         </div>
-        <h2 className={styles.center}>NS</h2>
 
-          <LineItems
-            items={this.state.lineItems}
-            currencyFormatter={this.formatCurrency}
-            addHandler={this.handleAddLineItem}
-            changeHandler={this.handleLineItemChange}
-            focusHandler={this.handleFocusSelect}
-            deleteHandler={this.handleRemoveLineItem}
-            reorderHandler={this.handleReorderLineItems}
-          />
+        <LineItems
+          items={this.state.lineItems}
+          currencyFormatter={this.formatCurrency}
+          addHandler={this.handleAddLineItem}
+          changeHandler={this.handleLineItemChange}
+          focusHandler={this.handleFocusSelect}
+          deleteHandler={this.handleRemoveLineItem}
+          reorderHandler={this.handleReorderLineItems}
+        />
 
         <div>
           <form>
-            <div className={styles.valueTable}>
+            <div className={styles.valueTableNew}>
               <div className={styles.row}>
                 <div className={styles.label}>Subtotal</div>
                 <div className={styles.princi}>{this.formatCurrency(this.calcLineItemsTotal())}</div>
@@ -134,7 +135,6 @@ class Invoice extends Component {
         <div className={styles.pay}>
           <button className={styles.payNow} onClick={this.handlePayButtonClick}>Print Now</button>
         </div>
-
       </div>
 
     )

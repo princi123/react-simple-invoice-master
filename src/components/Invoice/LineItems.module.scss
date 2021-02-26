@@ -1,14 +1,12 @@
 @import 'Invoice';
 
 .lineItems {
-  margin-bottom: $rhythm * 4;
   width: 80mm;
   .addItem {
-    padding-top: $rhythm;
     button {
       @extend %flex-center;
       background: none;
-      padding: $rhythm / 2;
+      padding: $rhythm / 4;
       border: 1px solid $addColor;
       color: $addColor;
       border-radius: $borderRadius;
@@ -29,7 +27,7 @@
   display: grid;
   & > .row {
     display: grid;
-    grid-template-columns: 42px 80px 80px 78px 13px;
+    grid-template-columns: 54px 80px 68px 78px 13px;
     grid-auto-flow: column;
     border-bottom: 1px solid $tableBorderColor;
     &:last-of-type {
