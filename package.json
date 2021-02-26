@@ -1,10 +1,11 @@
 {
   "name": "react-simple-invoice-dev",
   "version": "1.0.0",
-  "homepage": "https://princi123.github.io/anayainvoice",
+  "homepage": "https://princi123.github.io/react-simple-invoice-master",
   "private": true,
   "start": "node server/server.js",
   "dependencies": {
+    "gh-pages": "^3.1.0",
     "node-sass": "^4.10.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
@@ -12,14 +13,15 @@
     "react-dom": "^16.6.3",
     "react-icons": "^3.2.2",
     "react-scripts": "3.0.1",
-    "uuid": "^3.3.2"
+    "uuid": "^3.4.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "react-scripts build && dev/deploy.sh"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
